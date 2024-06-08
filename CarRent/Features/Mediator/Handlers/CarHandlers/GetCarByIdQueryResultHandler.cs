@@ -36,6 +36,7 @@ namespace CarRent.Features.Mediator.Handlers.CarHandlers
                 Transmission = value.Transmission,
                 Year = value.Year,
                 ImageUrl = value.ImageUrl,
+                Price = value.Price,
             };
         }
     }

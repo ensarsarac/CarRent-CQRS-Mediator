@@ -36,6 +36,7 @@ namespace CarRent.Features.Mediator.Handlers.CarHandlers
                 Seat = x.Seat,
                 Transmission= x.Transmission,
                 Year= x.Year,
+                Price= x.Price,
                 ImageUrl= x.ImageUrl,
             }).ToList();
         }

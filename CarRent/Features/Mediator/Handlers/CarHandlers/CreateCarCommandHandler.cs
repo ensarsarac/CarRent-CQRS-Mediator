@@ -32,6 +32,7 @@ namespace CarRent.Features.Mediator.Handlers.CarHandlers
                 Passanger = request.Passanger,
                 Description = request.Description,
                 ImageUrl = request.ImageUrl,
+                Price = request.Price,
             });
             await _context.SaveChangesAsync();
         }

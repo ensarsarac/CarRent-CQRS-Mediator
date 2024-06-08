@@ -1,4 +1,5 @@
-﻿using CarRent.Features.CQRS.Handlers.BrandHandlers;
+﻿using CarRent.DAL.Entity;
+using CarRent.Features.CQRS.Handlers.BrandHandlers;
 using CarRent.Features.CQRS.Handlers.LocationHandlers;
 using CarRent.Features.Mediator.Commands.CarCommands;
 using CarRent.Features.Mediator.Queries.CarQueries;
@@ -37,18 +38,29 @@ namespace CarRent.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateCar(CreateCarCommand createCarCommand)
         {
+            
             await _mediator.Send(createCarCommand);
             return RedirectToAction("Index");
         }
         public async Task<IActionResult> UpdateCar(int id)
         {
+            var locations = _queryHandler.Handle();
+            var brands = _brandHandler.Handle();
+            ViewBag.locationsValues = new SelectList(locations.ToList(), "LocationId", "LocationTitle");
+            ViewBag.brandsValues = new SelectList(brands.ToList(), "BrandId", "BrandTitle");
             var value = await _mediator.Send(new GetCarByIdQuery(id));
             return View(value);
         }
         [HttpPost]
-        public IActionResult UpdateCar()
+        public async Task<IActionResult> UpdateCar(UpdateCarCommand updateCarCommand)
         {
-            return View();
+            await _mediator.Send(updateCarCommand);
+            return RedirectToAction("Index");
+        }
+        public async Task<IActionResult> DeleteCar(int id)
+        {
+            await _mediator.Send(new RemoveCarCommand(id));
+            return RedirectToAction("Index");
         }
     }
 }

@@ -31,6 +31,7 @@ namespace CarRent.Features.Mediator.Handlers.CarHandlers
             value.Luggage = request.Luggage;
             value.Passanger = request.Passanger;
             value.ImageUrl = request.ImageUrl;
+            value.Price = request.Price;
             _context.Cars.Update(value);
             await _context.SaveChangesAsync();
         }
