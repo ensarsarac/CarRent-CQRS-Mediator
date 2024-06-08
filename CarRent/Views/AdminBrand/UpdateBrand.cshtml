@@ -1,0 +1,28 @@
+﻿@model CarRent.Features.CQRS.Results.BrandResults.GetBrandByIdQueryResult
+@{
+    ViewData["Title"] = "UpdateBrand";
+    ViewData["PageTitle"] = "Marka Güncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="white_shd full margin_bottom_30">
+        <div class="full graph_head">
+            <div class="heading1 margin_0">
+                <h2>Marka Güncelle</h2>
+            </div>
+        </div>
+        <div class="table_section padding_infor_info">
+            <div class="table-responsive-sm">
+                <form method="post">
+                    <input type="hidden" asp-for="@Model.BrandId" />
+                    <div class="form-group">
+                        <label>Marka Başlığı</label>
+                        <input type="text" class="form-control" asp-for="@Model.BrandTitle" />
+                    </div>
+                    <button type="submit" class="btn btn-warning">Güncelle</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

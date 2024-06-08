@@ -1,0 +1,27 @@
+﻿@model CarRent.Features.CQRS.Commands.LocationCommands.CreateLocationCommand
+@{
+    ViewData["Title"] = "CreateLocation";
+    ViewData["PageTitle"] = "Yeni Lokasyon Girişi";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="white_shd full margin_bottom_30">
+        <div class="full graph_head">
+            <div class="heading1 margin_0">
+                <h2>Yeni Lokasyon Girişi</h2>
+            </div>
+        </div>
+        <div class="table_section padding_infor_info">
+            <div class="table-responsive-sm">
+                <form method="post">
+                    <div class="form-group">
+                        <label>Lokasyon Başlığı</label>
+                        <input type="text" class="form-control" name="LocationTitle" />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

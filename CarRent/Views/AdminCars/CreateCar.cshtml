@@ -1,0 +1,79 @@
+﻿@model CarRent.Features.Mediator.Commands.CarCommands.CreateCarCommand
+@{
+    ViewData["Title"] = "CreateCar";
+    ViewData["PageTitle"] = "Yeni Araba Girişi";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="white_shd full margin_bottom_30">
+        <div class="full graph_head">
+            <div class="heading1 margin_0">
+                <h2>Yeni Araba Girişi</h2>
+            </div>
+        </div>
+        <div class="table_section padding_infor_info">
+            <div class="table-responsive-sm">
+                <form method="post">
+                    <div class="form-group">
+                        <label>Model</label>
+                        <input type="text" class="form-control" name="Model" />
+                    </div>
+                    <div class="form-group">
+                        <label>Renk</label>
+                        <input type="text" class="form-control" name="Color" />
+                    </div>
+                    <div class="form-group">
+                        <label>Marka</label>
+                        @Html.DropDownListFor(x => x.BrandId, (SelectList)ViewBag.brandsValues,"Marka Seçiniz..",new {@class="form-control"})
+                    </div>
+                    <div class="form-group">
+                        <label>Marka</label>
+                        @Html.DropDownListFor(x => x.LocationId, (SelectList)ViewBag.locationsValues, "Lokasyon Seçiniz..", new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>Yıl</label>
+                        <input type="text" class="form-control" name="Year" />
+                    </div>
+                    <div class="form-group">
+                        <label>Vites Türü</label>
+                        <input type="text" class="form-control" name="Transmission" />
+                    </div>
+                    <div class="form-group">
+                        <label>Km</label>
+                        <input type="text" class="form-control" name="Km" />
+                    </div>
+                    <div class="form-group">
+                        <label>Yakıt Türü</label>
+                        <input type="text" class="form-control" name="Fuel" />
+                    </div>
+                    <div class="form-group">
+                        <label>Koltuk</label>
+                        <input type="text" class="form-control" name="Seat" />
+                    </div>
+                    <div class="form-group">
+                        <label>Kapı</label>
+                        <input type="text" class="form-control" name="Door" />
+                    </div>
+                    <div class="form-group">
+                        <label>Bagaj</label>
+                        <input type="text" class="form-control" name="Luggage" />
+                    </div>
+                    <div class="form-group">
+                        <label>Yolcu</label>
+                        <input type="text" class="form-control" name="Passanger" />
+                    </div>
+                    <div class="form-group">
+                        <label>Görsel Link</label>
+                        <input type="text" class="form-control" name="ImageUrl" />
+                    </div>
+                    <div class="form-group">
+                        <label>Açıklama</label>
+                        <textarea class="form-control" name="Description" cols="5" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>CarRent CQRS - Mediator</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- site icon -->
+    <link rel="icon" href="~/pluto-1.0.0/images/fevicon.png" type="image/png" />
+      <!-- bootstrap css -->
+    <link rel="stylesheet" href="~/pluto-1.0.0/css/bootstrap.min.css" />
+      <!-- site css -->
+    <link rel="stylesheet" href="~/pluto-1.0.0/style.css" />
+      <!-- responsive css -->
+    <link rel="stylesheet" href="~/pluto-1.0.0/css/responsive.css" />
+      <!-- color css -->
+    <link rel="stylesheet" href="~/pluto-1.0.0/css/colors.css" />
+      <!-- select bootstrap -->
+    <link rel="stylesheet" href="~/pluto-1.0.0/css/bootstrap-select.css" />
+      <!-- scrollbar css -->
+    <link rel="stylesheet" href="~/pluto-1.0.0/css/perfect-scrollbar.css" />
+      <!-- custom css -->
+    <link rel="stylesheet" href="~/pluto-1.0.0/css/custom.css" />
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body class="dashboard dashboard_1">
+      <div class="full_container">
+         <div class="inner_container">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+               <div class="sidebar_blog_2">
+                  <ul class="list-unstyled components">
+                     <li class="active">
+                        <a href="/AdminBrand/Index"><i class="fa fa-dashboard yellow_color"></i> <span>Markalar</span></a>
+                     </li>
+                        <li class="active">
+                            <a href="/AdminLocation/Index"><i class="fa fa-map purple_color2"></i> <span>Lokasyonlar</span></a>
+                        </li>
+                        <li class="active">
+                            <a href="/AdminCars/Index"><i class="fa fa-car red_color"></i> <span>Arabalar</span></a>
+                        </li>
+                  </ul>
+               </div>
+            </nav>
+            <!-- end sidebar -->
+            <!-- right content -->
+            <div id="content">
+               <!-- topbar -->
+               <div class="topbar">
+                  <nav class="navbar navbar-expand-lg navbar-light">
+                     <div class="full">
+                        <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="fa fa-bars"></i></button>
+                        
+                        <div class="right_topbar">
+                           <div class="icon_info">
+                              <ul>
+                                 <li><a href="#"><i class="fa fa-bell-o"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-question-circle"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-envelope-o"></i></a></li>
+                              </ul>
+                             
+                           </div>
+                        </div>
+                     </div>
+                  </nav>
+               </div>
+               <!-- end topbar -->
+               <!-- dashboard inner -->
+               <div class="midde_cont">
+                  <div class="container-fluid">
+                     <div class="row column_title">
+                        <div class="col-md-12">
+                           <div class="page_title">
+                                    <h2>@ViewData["PageTitle"]</h2>
+                           </div>
+                        </div>
+                     </div>
+                     @RenderBody()
+                  </div>
+                  <!-- footer -->
+                  <div class="container-fluid">
+                     <div class="footer">
+                        <p>Copyright © 2018 Designed by html.design. All rights reserved.<br><br>
+                           Distributed By: <a href="https://themewagon.com/">ThemeWagon</a>
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <!-- end dashboard inner -->
+            </div>
+         </div>
+      </div>
+      <!-- jQuery -->
+      <script src="~/pluto-1.0.0/js/jquery.min.js"></script>
+      <script src="~/pluto-1.0.0/js/popper.min.js"></script>
+    <script src="~/pluto-1.0.0/js/bootstrap.min.js"></script>
+      <!-- wow animation -->
+    <script src="~/pluto-1.0.0/js/animate.js"></script>
+      <!-- select country -->
+    <script src="~/pluto-1.0.0/js/bootstrap-select.js"></script>
+      <!-- owl carousel -->
+    <script src="~/pluto-1.0.0/js/owl.carousel.js"></script>
+    <!-- chart js -->
+    <script src="~/pluto-1.0.0/js/Chart.min.js"></script>
+    <script src="~/pluto-1.0.0/js/Chart.bundle.min.js"></script>
+    <script src="~/pluto-1.0.0/js/utils.js"></script>
+    <script src="~/pluto-1.0.0/js/analyser.js"></script>
+      <!-- nice scrollbar -->
+    <script src="~/pluto-1.0.0/js/perfect-scrollbar.min.js"></script>
+      <script>
+         var ps = new PerfectScrollbar('#sidebar');
+      </script>
+      <!-- custom js -->
+      <script src="~/pluto-1.0.0/js/custom.js"></script>
+    <script src="~/pluto-1.0.0/js/chart_custom_style1.js"></script>
+   </body>
+</html>
