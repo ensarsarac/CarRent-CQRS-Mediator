@@ -90,7 +90,14 @@
                 {
                     <div class="alert alert-warning">@ViewBag.warning</div>
                 }
-
+                @if (ViewBag.success != null)
+                {
+                    <div class="row mb-5">
+                        <div class="col-12">
+                    <div class="alert alert-success mb-3">@ViewBag.success</div>
+                        </div>
+                    </div>
+                }
                 <div class="row">
                     @foreach (var item in Model)
                     {

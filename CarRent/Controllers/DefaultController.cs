@@ -52,7 +52,10 @@ namespace CarRent.Controllers
                     return View(values);
                 }
                 else
-                return View(values);
+                {
+                    ViewBag.success = "Aradığınız kriterlerde araçlar listelenmiştir.";
+                    return View(values);
+                }
             }
             else
             {
